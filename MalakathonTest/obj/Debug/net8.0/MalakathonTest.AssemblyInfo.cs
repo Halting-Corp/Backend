@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MalakathonTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2c518c52be525be5cba102f2f44002cdcfd056d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c3ed3cc6d8e722dfe41f01a89b10424346ac6012")]
 [assembly: System.Reflection.AssemblyProductAttribute("MalakathonTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MalakathonTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
