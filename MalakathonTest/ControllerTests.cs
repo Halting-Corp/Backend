@@ -33,7 +33,32 @@ public class Tests
     {
         var sut = new GetReservoirsOrderedByDistance(reservoirs);
         var reversed = reservoirs.Reverse<Reservoir>().ToList();
-        sut.Execute(new Location(10, 10)).Value.Should().BeEquivalentTo(reversed, options => options.WithStrictOrdering());
+        var result = sut.Execute(new Location(10, 10)).Value!;
+        OrderChecker(result, sut, new Location(10, 10));
+    }
+
+    [Test]
+    public void GetReservoirsinOtherOrder()
+    {
+        var sut = new GetReservoirsOrderedByDistance(reservoirs);
+        var result = sut.Execute(new Location(5, 5)).Value!;
+        OrderChecker(result, sut, new Location(5, 5));
+    }
+
+    private static void OrderChecker(List<Reservoir> result, GetReservoirsOrderedByDistance sut, Location location)
+    {
+        for (int i = 0; i < result.Count - 1; i++)
+        {
+            sut.Distance(location, result[i].Location).Should().BeLessOrEqualTo(sut.Distance(location, result[i + 1].Location));
+        }
+    }
+
+    [Test]
+    public void Distance()
+    {
+        var sut = new GetReservoirsOrderedByDistance(reservoirs);
+        sut.Distance(new Location(0, 0), new Location(3, 4)).Should().Be(5);
+        
     }
 }
 
