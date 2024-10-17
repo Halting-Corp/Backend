@@ -22,5 +22,6 @@ app.MapGet("/embalses0", () => new GetReservoirsOrderedByDistance().Execute(new 
 app.MapGet("/embalse", (int id) => new GetReservoirInfo().Execute(id));
 app.MapGet("/", () => "Hello World!");
 
+app.MapGet("/agua-embalse", (int id) => new GetReservoirWater().Execute(id));
 
 app.Run();
