@@ -23,6 +23,7 @@ app.MapGet("/embalses", (double x, double y) => new GetReservoirsOrderedByDistan
 app.MapGet("/embalses0", () => new GetReservoirsOrderedByDistance().Execute(new Location(0,0)));
 
 app.MapGet("/embalse", () => { });
+app.MapGet("/", () => "Hello World!");
 
 
 app.Run();
