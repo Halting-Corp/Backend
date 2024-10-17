@@ -6,27 +6,26 @@ namespace MalakathonTest;
 
 public class Tests
 {
-    private List<ReservoirBrief> reservoirs =
+    private List<ReceivedReservoir> reservoirs =
     [
-        new ReservoirBrief("1", "reservoir1", new Location(0, 0), 0),
-        new ReservoirBrief("2", "reservoir2", new Location(1, 1), 0),
-        new ReservoirBrief("3", "reservoir3", new Location(2, 2), 0),
-        new ReservoirBrief("4", "reservoir4", new Location(3, 3), 0),
-        new ReservoirBrief("5", "reservoir5", new Location(4, 4), 0),
-        new ReservoirBrief("6", "reservoir6", new Location(5, 5), 0),
-        new ReservoirBrief("7", "reservoir7", new Location(6, 6), 0),
-        new ReservoirBrief("8", "reservoir8", new Location(7, 7), 0),
-        new ReservoirBrief("9", "reservoir9", new Location(8, 8), 0),
-        new ReservoirBrief("10", "reservoir10", new Location(9, 9), 0),
-        new ReservoirBrief("10", "reservoir10", new Location(9, 9), 0),
-        new ReservoirBrief("10", "reservoir10", new Location(9, 9), 0),
+        new ReceivedReservoir("1", "a", 0, 0),
+        new ReceivedReservoir("2", "b", 1, 1),
+        new ReceivedReservoir("3", "c", 2, 2),
+        new ReceivedReservoir("4", "d", 3, 3),
+        new ReceivedReservoir("5", "e", 4, 4),
+        new ReceivedReservoir("6", "f", 5, 5),
+        new ReceivedReservoir("7", "g", 6, 6),
+        new ReceivedReservoir("8", "h", 7, 7),
+        new ReceivedReservoir("9", "i", 8, 8),
+        new ReceivedReservoir("10", "j", 9, 9),
     ];
 
     [Test]
     public async Task GetReservoirsWhichAreAlreadyOrdered()
     {
         var sut = new GetReservoirsOrderedByDistance(reservoirs);
-        (await sut.Execute(new Location(0, 0))).Value.Should().BeEquivalentTo(reservoirs, options => options.WithStrictOrdering());
+        var result = (await sut.Execute(new Location(0, 0))).Value!;
+        OrderChecker(result, sut, new Location(0, 0));
     }
     
     [Test]

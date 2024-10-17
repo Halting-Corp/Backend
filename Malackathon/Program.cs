@@ -1,3 +1,6 @@
+using Malackathon;
+using static Malackathon.GetReservoirsOrderedByDistance;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
@@ -16,7 +19,7 @@ app.UseHttpsRedirection();
 // Recibir coordenadas, devolver embalses ordenados por distancia
 
 
-app.MapGet("/embalses", () => { });
+app.MapGet("/embalses", (double x, double y) => new GetReservoirsOrderedByDistance().Execute(new Location(x,y)));
 app.MapGet("/embalse", () => { });
 
 
