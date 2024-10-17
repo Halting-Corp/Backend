@@ -15,7 +15,9 @@ app.UseHttpsRedirection();
 
 // Recibir coordenadas, devolver embalses ordenados por distancia
 
+
 app.MapGet("/embalses", () => { });
+app.MapGet("/embalse", () => { });
 
 
 app.Run();

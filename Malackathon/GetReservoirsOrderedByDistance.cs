@@ -2,24 +2,17 @@
 
 namespace Malackathon;
 
-public class GetReservoirsOrderedByDistance
+public class GetReservoirsOrderedByDistance(List<GetReservoirsOrderedByDistance.ReservoirBrief> reservoirs)
 {
-    private readonly List<Reservoir> reservoirs;
-
-    public GetReservoirsOrderedByDistance(List<Reservoir> reservoirs)
+    public async Task<Ok<List<ReservoirBrief>>> Execute(Location location)
     {
-        this.reservoirs = reservoirs;
-    }
-
-    public Ok<List<Reservoir>> Execute(Location location)
-    {
-        reservoirs.Sort((a, b) => Distance(location, a.Location).CompareTo(Distance(location, b.Location)));
+        reservoirs.Sort((a, b) => Distance(location, a.location).CompareTo(Distance(location, b.location)));
         return TypedResults.Ok(reservoirs);
     }
     
     public record Location(double x, double y);
 
-    public record Reservoir(Location Location);
+    public record ReservoirBrief(string id, string name, Location location, double distance);
 
     public double Distance(Location a, Location b)
     {
