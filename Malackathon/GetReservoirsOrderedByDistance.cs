@@ -4,17 +4,22 @@ namespace Malackathon;
 
 public class GetReservoirsOrderedByDistance
 {
-    private List<ReceivedReservoir> reservoirs;
+    private List<ReceivedReservoirBrief>? reservoirs;
 
-    public GetReservoirsOrderedByDistance(List<ReceivedReservoir> reservoirs)
+    public GetReservoirsOrderedByDistance(List<ReceivedReservoirBrief>? reservoirs)
     {
         this.reservoirs = reservoirs;
     }
 
-    public GetReservoirsOrderedByDistance() : this(Repository.GetReservoirs()!){}
-    
+    public GetReservoirsOrderedByDistance()
+    {
+        
+    }
+
     public async Task<Ok<List<ReservoirBrief>>> Execute(Location location)
     {
+        reservoirs ??= (await Repository.GetReservoirs());
+        
         var briefs = reservoirs.Select(r =>
             {
                 var location2 = new Location(double.Parse(r.x.Replace(",", ".")), double.Parse(r.y.Replace(",", ".")));
@@ -29,7 +34,8 @@ public class GetReservoirsOrderedByDistance
     public record Location(double x, double y);
 
     public record ReservoirBrief(int id, string name, Location location, double distance);
-    public record ReceivedReservoir(int codigo, string nombre, string x, string y);
+    public record ReceivedReservoirBrief(int codigo, string nombre, string x, string y);
+ 
 
     public double Distance(Location a, Location b)
     {

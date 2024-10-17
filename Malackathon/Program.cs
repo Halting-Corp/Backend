@@ -16,13 +16,10 @@ var app = builder.Build();
 
 app.UseHttpsRedirection();
 
-// Recibir coordenadas, devolver embalses ordenados por distancia
-
-
 app.MapGet("/embalses", (double x, double y) => new GetReservoirsOrderedByDistance().Execute(new Location(x,y)));
 app.MapGet("/embalses0", () => new GetReservoirsOrderedByDistance().Execute(new Location(0,0)));
 
-app.MapGet("/embalse", () => { });
+app.MapGet("/embalse", (int id) => new GetReservoirInfo().Execute(id));
 app.MapGet("/", () => "Hello World!");
 
 

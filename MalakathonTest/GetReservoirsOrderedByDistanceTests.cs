@@ -6,15 +6,15 @@ namespace MalakathonTest;
 
 public class Tests
 {
-    private List<ReceivedReservoir> reservoirs =
+    private List<ReceivedReservoirBrief>? reservoirs =
     [
-        new ReceivedReservoir(1, "a", "0", "0"),
-        new ReceivedReservoir(2, "b", "3", "4"),
-        new ReceivedReservoir(3, "c", "5", "5"),
-        new ReceivedReservoir(4, "d", "10", "10"),
-        new ReceivedReservoir(5, "e", "1", "1"),
-        new ReceivedReservoir(6, "f", "2", "2"),
-        new ReceivedReservoir(7, "g", "3", "3"),
+        new ReceivedReservoirBrief(1, "a", "0", "0"),
+        new ReceivedReservoirBrief(2, "b", "3", "4"),
+        new ReceivedReservoirBrief(3, "c", "5", "5"),
+        new ReceivedReservoirBrief(4, "d", "10", "10"),
+        new ReceivedReservoirBrief(5, "e", "1", "1"),
+        new ReceivedReservoirBrief(6, "f", "2", "2"),
+        new ReceivedReservoirBrief(7, "g", "3", "3"),
     ];
 
     [Test]
