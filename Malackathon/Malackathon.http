@@ -1,6 +1,12 @@
 @Malackathon_HostAddress = http://localhost:5267
 
-GET {{Malackathon_HostAddress}}/weatherforecast/
+GET {{Malackathon_HostAddress}}/embalses/
 Accept: application/json
+## params
+{
+    "x" : 0,
+"y" : 0
+}
+
 
 ###

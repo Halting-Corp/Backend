@@ -8,16 +8,13 @@ public class Tests
 {
     private List<ReceivedReservoir> reservoirs =
     [
-        new ReceivedReservoir("1", "a", 0, 0),
-        new ReceivedReservoir("2", "b", 1, 1),
-        new ReceivedReservoir("3", "c", 2, 2),
-        new ReceivedReservoir("4", "d", 3, 3),
-        new ReceivedReservoir("5", "e", 4, 4),
-        new ReceivedReservoir("6", "f", 5, 5),
-        new ReceivedReservoir("7", "g", 6, 6),
-        new ReceivedReservoir("8", "h", 7, 7),
-        new ReceivedReservoir("9", "i", 8, 8),
-        new ReceivedReservoir("10", "j", 9, 9),
+        new ReceivedReservoir(1, "a", "0", "0"),
+        new ReceivedReservoir(2, "b", "3", "4"),
+        new ReceivedReservoir(3, "c", "5", "5"),
+        new ReceivedReservoir(4, "d", "10", "10"),
+        new ReceivedReservoir(5, "e", "1", "1"),
+        new ReceivedReservoir(6, "f", "2", "2"),
+        new ReceivedReservoir(7, "g", "3", "3"),
     ];
 
     [Test]

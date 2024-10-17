@@ -15,7 +15,12 @@ public class GetReservoirsOrderedByDistance
     
     public async Task<Ok<List<ReservoirBrief>>> Execute(Location location)
     {
-        var briefs = reservoirs.Select(r => new ReservoirBrief(r.code, r.name, new Location(r.x, r.y), Distance(location, new Location(r.x, r.y))))
+        var briefs = reservoirs.Select(r =>
+            {
+                var location2 = new Location(double.Parse(r.x.Replace(",", ".")), double.Parse(r.y.Replace(",", ".")));
+                return new ReservoirBrief(r.codigo, r.nombre, location2,
+                    Distance(location, location2));
+            })
             .ToList();
         briefs.Sort((a, b) => a.distance.CompareTo(b.distance));
         return TypedResults.Ok(briefs);
@@ -23,8 +28,8 @@ public class GetReservoirsOrderedByDistance
     
     public record Location(double x, double y);
 
-    public record ReservoirBrief(string id, string name, Location location, double distance);
-    public record ReceivedReservoir(string code, string name, double x, double y);
+    public record ReservoirBrief(int id, string name, Location location, double distance);
+    public record ReceivedReservoir(int codigo, string nombre, string x, string y);
 
     public double Distance(Location a, Location b)
     {
