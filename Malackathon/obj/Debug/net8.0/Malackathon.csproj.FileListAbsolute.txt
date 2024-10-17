@@ -31,3 +31,4 @@ C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\Malackathon\obj\De
 C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\Malackathon\obj\Debug\net8.0\Malackathon.pdb
 C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\Malackathon\obj\Debug\net8.0\Malackathon.genruntimeconfig.cache
 C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\Malackathon\obj\Debug\net8.0\ref\Malackathon.dll
+C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\Malackathon\obj\Debug\net8.0\Malackathon.sourcelink.json

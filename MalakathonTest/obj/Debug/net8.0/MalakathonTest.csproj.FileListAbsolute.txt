@@ -101,3 +101,17 @@ C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\MalakathonTest\obj
 C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\MalakathonTest\obj\Debug\net8.0\MalakathonTest.pdb
 C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\MalakathonTest\obj\Debug\net8.0\MalakathonTest.genruntimeconfig.cache
 C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\MalakathonTest\obj\Debug\net8.0\ref\MalakathonTest.dll
+C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\MalakathonTest\bin\Debug\net8.0\CoverletSourceRootsMapping_MalakathonTest
+C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\MalakathonTest\bin\Debug\net8.0\Malackathon.deps.json
+C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\MalakathonTest\bin\Debug\net8.0\Malackathon.runtimeconfig.json
+C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\MalakathonTest\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\MalakathonTest\bin\Debug\net8.0\appsettings.json
+C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\MalakathonTest\bin\Debug\net8.0\Malackathon.exe
+C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\MalakathonTest\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\MalakathonTest\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\MalakathonTest\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\MalakathonTest\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\MalakathonTest\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\MalakathonTest\bin\Debug\net8.0\Malackathon.dll
+C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\MalakathonTest\bin\Debug\net8.0\Malackathon.pdb
+C:\Users\javie\OneDrive\Documentos\Programming\C#\Malackathon\MalakathonTest\obj\Debug\net8.0\MalakathonTest.sourcelink.json

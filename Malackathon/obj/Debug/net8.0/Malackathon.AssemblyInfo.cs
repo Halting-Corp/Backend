@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Malackathon")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d41cbc33f891d5f4b94e50607c4fbda88954e9d9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Malackathon")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Malackathon")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
